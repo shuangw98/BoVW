@@ -1,0 +1,37 @@
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  MASK_ON: False
+  WEIGHTS: "checkpoints/coco/bovw/model_reset_surgery.pth"
+  RESNET_BOVW: "configs/ResNet101.yaml"
+  BOVW_WEIGHT: "weight/coco/pabovw/model_best.pth"
+  NUM_WORDS: 1024
+  RESNETS:
+    DEPTH: 101
+  BACKBONE:
+    FREEZE: False
+    FREEZE_AT: 5
+  PROPOSAL_GENERATOR:
+    FREEZE: False
+  RPN:
+    POST_NMS_TOPK_TRAIN: 2000
+  ROI_HEADS:
+    NAME: "BoVWROIHeads"
+    NUM_CLASSES: 80
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: False
+    BATCH_SIZE_PER_IMAGE: 256
+    BOW_IOU_THRESHOLD: 0.8
+DATASETS:
+  TRAIN: ('coco_trainval_all_10shot',)
+  TEST: ('coco_test_all',)
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.0005
+  GAMMA: 0.3
+  STEPS: (24000,)
+  MAX_ITER: 30000
+  CHECKPOINT_PERIOD: 200000
+  WARMUP_ITERS: 200
+TEST:
+  EVAL_PERIOD: 2000
+OUTPUT_DIR: "checkpoints/coco/bovw/10shot"

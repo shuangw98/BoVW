@@ -1,0 +1,8 @@
+VERSION: 2
+MODEL:
+  BACKBONE:
+    NAME: "build_resnet_backbone"
+    FREEZE_AT: 5
+  RESNETS:
+    OUT_FEATURES: ["res5"]
+    DEPTH: 101
