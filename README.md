@@ -39,5 +39,8 @@ If you find our code helpful in your research, please cite the following publica
 }
 ```
 
+## Acknowledgement
+This repo is developed based on [FSCE](https://github.com/megvii-research/FSCE) , [Detectron2](https://github.com/facebookresearch/detectron2) , [FewX](https://github.com/fanq15/FewX).
+
 ## Contact
 Please feel free to contact me (Email: wushuang9811@outlook.com) if you have any questions.
