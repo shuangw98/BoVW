@@ -40,7 +40,7 @@ If you find our code helpful in your research, please cite the following publica
 ```
 
 ## Acknowledgement
-This repo is developed based on [FSCE](https://github.com/megvii-research/FSCE) , [Detectron2](https://github.com/facebookresearch/detectron2) , [FewX](https://github.com/fanq15/FewX).
+This repo is developed based on [FSCE](https://github.com/megvii-research/FSCE), some code snippets are borrowed [Detectron2](https://github.com/facebookresearch/detectron2) and [FewX](https://github.com/fanq15/FewX). Thanks for these great projects.
 
 ## Contact
 Please feel free to contact me (Email: wushuang9811@outlook.com) if you have any questions.
